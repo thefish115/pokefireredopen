@@ -3717,42 +3717,54 @@ static const struct TrainerMonItemDefaultMoves sParty_BlackBeltDaisuke[] = {
     },
 };
 
-static const struct TrainerMonNoItemDefaultMoves sParty_RivalOaksLabSquirtle[] = {
+static const struct TrainerMonNoItemDefaultMoves sParty_RivalOaksLabSpearow[] = {
     {
         .iv = 0,
-        .lvl = 5,
-        .species = SPECIES_SQUIRTLE,
+        .lvl = 1,
+        .species = SPECIES_SPEAROW,
     },
 };
 
-static const struct TrainerMonNoItemDefaultMoves sParty_RivalOaksLabBulbasaur[] = {
+static const struct TrainerMonNoItemDefaultMoves sParty_RivalOaksLabPidgey[] = {
     {
         .iv = 0,
-        .lvl = 5,
-        .species = SPECIES_BULBASAUR,
+        .lvl = 1,
+        .species = SPECIES_PIDGEY,
     },
 };
 
-static const struct TrainerMonNoItemDefaultMoves sParty_RivalOaksLabCharmander[] = {
+static const struct TrainerMonNoItemDefaultMoves sParty_RivalOaksLabRattata[] = {
     {
         .iv = 0,
-        .lvl = 5,
-        .species = SPECIES_CHARMANDER,
+        .lvl = 1,
+        .species = SPECIES_RATTATA,
     },
 };
 
-static const struct TrainerMonNoItemCustomMoves sParty_RivalRoute22EarlySquirtle[] = {
+static const struct TrainerMonNoItemCustomMoves sParty_RivalRoute22Early[] = {
     {
         .iv = 50,
-        .lvl = 9,
+        .lvl = 6,
         .species = SPECIES_PIDGEY,
         .moves = {MOVE_TACKLE, MOVE_SAND_ATTACK, MOVE_NONE, MOVE_NONE},
     },
     {
         .iv = 50,
+        .lvl = 7,
+        .species = SPECIES_RATTATA,
+        .moves = {MOVE_TACKLE, MOVE_TAIL_WHIP, MOVE_QUICK_ATTACK, MOVE_NONE},
+    },
+    {
+        .iv = 50,
+        .lvl = 8,
+        .species = SPECIES_SPEAROW,
+        .moves = {MOVE_PECK, MOVE_GROWL, MOVE_LEER, MOVE_NONE},
+    },
+    {
+        .iv = 50,
         .lvl = 9,
-        .species = SPECIES_SQUIRTLE,
-        .moves = {MOVE_TACKLE, MOVE_TAIL_WHIP, MOVE_NONE, MOVE_NONE},
+        .species = SPECIES_MANKEY,
+        .moves = {MOVE_SCRATCH, MOVE_LEER, MOVE_LOW_KICK, MOVE_NONE},
     },
 };
 
@@ -3786,30 +3798,42 @@ static const struct TrainerMonNoItemCustomMoves sParty_RivalRoute22EarlyCharmand
     },
 };
 
-static const struct TrainerMonNoItemCustomMoves sParty_RivalCeruleanSquirtle[] = {
+static const struct TrainerMonNoItemCustomMoves sParty_RivalCerulean[] = {
     {
         .iv = 50,
-        .lvl = 17,
-        .species = SPECIES_PIDGEOTTO,
-        .moves = {MOVE_TACKLE, MOVE_SAND_ATTACK, MOVE_GUST, MOVE_QUICK_ATTACK},
+        .lvl = 20,
+        .species = SPECIES_GYARADOS,
+        .moves = {MOVE_TACKLE, MOVE_BITE, MOVE_THRASH, MOVE_NONE},
+    },
+    {
+        .iv = 50,
+        .lvl = 18,
+        .species = SPECIES_KADABRA,
+        .moves = {MOVE_TELEPORT, MOVE_KINESIS, MOVE_CONFUSION, MOVE_DISABLE},
+    },
+    {
+        .iv = 50,
+        .lvl = 18,
+        .species = SPECIES_BUTTERFREE,
+        .moves = {MOVE_TACKLE, MOVE_CONFUSION, MOVE_STUN_SPORE, MOVE_SUPERSONIC},
+    },
+    {
+        .iv = 50,
+        .lvl = 18,
+        .species = SPECIES_NIDORINO,
+        .moves = {MOVE_PECK, MOVE_FOCUS_ENERGY, MOVE_DOUBLE_KICK, MOVE_POISON_STING},
     },
     {
         .iv = 50,
         .lvl = 16,
-        .species = SPECIES_ABRA,
-        .moves = {MOVE_TELEPORT, MOVE_NONE, MOVE_NONE, MOVE_NONE},
+        .species = SPECIES_IVYSAUR,
+        .moves = {MOVE_TACKLE, MOVE_LEECH_SEED, MOVE_VINE_WHIP, MOVE_SLEEP_POWDER},
     },
     {
         .iv = 50,
-        .lvl = 15,
-        .species = SPECIES_RATTATA,
-        .moves = {MOVE_TACKLE, MOVE_TAIL_WHIP, MOVE_QUICK_ATTACK, MOVE_NONE},
-    },
-    {
-        .iv = 100,
-        .lvl = 18,
-        .species = SPECIES_SQUIRTLE,
-        .moves = {MOVE_TACKLE, MOVE_TAIL_WHIP, MOVE_WITHDRAW, MOVE_WATER_GUN},
+        .lvl = 20,
+        .species = SPECIES_PIDGEOTTO,
+        .moves = {MOVE_TACKLE, MOVE_SAND_ATTACK, MOVE_GUST, MOVE_QUICK_ATTACK},
     },
 };
 

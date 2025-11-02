@@ -4,14 +4,7 @@ CeruleanCity_MapScripts::
 
 CeruleanCity_OnTransition::
 	setworldmapflag FLAG_WORLD_MAP_CERULEAN_CITY
-	call_if_unset FLAG_GOT_SS_TICKET, CeruleanCity_EventScript_BlockExits
 	end
-
-CeruleanCity_EventScript_BlockExits::
-	setobjectxyperm LOCALID_CERULEAN_POLICEMAN, 30, 12
-	setobjectxyperm LOCALID_CERULEAN_SLOWBRO, 26, 31
-	setobjectxyperm LOCALID_CERULEAN_LASS, 27, 31
-	return
 
 CeruleanCity_EventScript_RivalTriggerLeft::
 	lockall
@@ -42,9 +35,7 @@ CeruleanCity_EventScript_Rival::
 	waitmovement 0
 	msgbox CeruleanCity_Text_RivalIntro
 	setvar VAR_LAST_TALKED, LOCALID_CERULEAN_RIVAL
-	call_if_eq VAR_STARTER_MON, 2, CeruleanCity_EventScript_RivalSquirtle
-	call_if_eq VAR_STARTER_MON, 1, CeruleanCity_EventScript_RivalBulbasaur
-	call_if_eq VAR_STARTER_MON, 0, CeruleanCity_EventScript_RivalCharmander
+	trainerbattle_no_intro TRAINER_RIVAL_CERULEAN, CeruleanCity_Text_RivalDefeat
 	famechecker FAMECHECKER_BILL, 0
 	msgbox CeruleanCity_Text_RivalPostBattle
 	closemessage
@@ -66,7 +57,7 @@ CeruleanCity_EventScript_Rival::
 	end
 
 CeruleanCity_EventScript_RivalSquirtle::
-	trainerbattle_no_intro TRAINER_RIVAL_CERULEAN_SQUIRTLE, CeruleanCity_Text_RivalDefeat
+	trainerbattle_no_intro TRAINER_RIVAL_CERULEAN, CeruleanCity_Text_RivalDefeat
 	return
 
 CeruleanCity_EventScript_RivalBulbasaur::

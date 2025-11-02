@@ -53,9 +53,9 @@
 #define FLAG_0x027               0x027
 
 // Hide/show flags
-#define FLAG_HIDE_BULBASAUR_BALL                           0x028
-#define FLAG_HIDE_SQUIRTLE_BALL                            0x029
-#define FLAG_HIDE_CHARMANDER_BALL                          0x02A
+#define FLAG_HIDE_PIDGEY_BALL                              0x028
+#define FLAG_HIDE_SPEAROW_BALL                             0x029
+#define FLAG_HIDE_RATTATA_BALL                             0x02A
 #define FLAG_HIDE_OAK_IN_HIS_LAB                           0x02B
 #define FLAG_HIDE_OAK_IN_PALLET_TOWN                       0x02C
 #define FLAG_HIDE_RIVAL_IN_LAB                             0x02D

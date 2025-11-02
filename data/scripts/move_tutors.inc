@@ -105,10 +105,7 @@ EventScript_ExplosionTaught::
 Route4_EventScript_MegaPunchTutor::
 	lock
 	faceplayer
-	goto_if_set FLAG_TUTOR_MEGA_PUNCH, EventScript_MegaPunchTaught
 	msgbox Text_MegaPunchTeach, MSGBOX_YESNO
-	goto_if_eq VAR_RESULT, NO, EventScript_MegaPunchDeclined
-	call EventScript_CanOnlyBeLearnedOnce
 	goto_if_eq VAR_RESULT, NO, EventScript_MegaPunchDeclined
 	msgbox Text_MegaPunchWhichMon
 	setvar VAR_0x8005, MOVETUTOR_MEGA_PUNCH
@@ -131,10 +128,7 @@ EventScript_MegaPunchTaught::
 Route4_EventScript_MegaKickTutor::
 	lock
 	faceplayer
-	goto_if_set FLAG_TUTOR_MEGA_KICK, EventScript_MegaKickTaught
 	msgbox Text_MegaKickTeach, MSGBOX_YESNO
-	goto_if_eq VAR_RESULT, NO, EventScript_MegaKickDeclined
-	call EventScript_CanOnlyBeLearnedOnce
 	goto_if_eq VAR_RESULT, NO, EventScript_MegaKickDeclined
 	msgbox Text_MegaKickWhichMon
 	setvar VAR_0x8005, MOVETUTOR_MEGA_KICK

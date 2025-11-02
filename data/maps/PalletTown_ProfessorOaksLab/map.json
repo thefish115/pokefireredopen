@@ -73,7 +73,7 @@
       "flag": "FLAG_HIDE_OAK_IN_HIS_LAB"
     },
     {
-      "local_id": "LOCALID_BULBASAUR_BALL",
+      "local_id": "LOCALID_PIDGEY_BALL",
       "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL",
       "x": 8,
@@ -84,11 +84,11 @@
       "movement_range_y": 1,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "PalletTown_ProfessorOaksLab_EventScript_BulbasaurBall",
-      "flag": "FLAG_HIDE_BULBASAUR_BALL"
+      "script": "PalletTown_ProfessorOaksLab_EventScript_PidgeyBall",
+      "flag": "FLAG_HIDE_PIDGEY_BALL"
     },
     {
-      "local_id": "LOCALID_SQUIRTLE_BALL",
+      "local_id": "LOCALID_SPEAROW_BALL",
       "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL",
       "x": 9,
@@ -99,11 +99,11 @@
       "movement_range_y": 1,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "PalletTown_ProfessorOaksLab_EventScript_SquirtleBall",
-      "flag": "FLAG_HIDE_SQUIRTLE_BALL"
+      "script": "PalletTown_ProfessorOaksLab_EventScript_SpearowBall",
+      "flag": "FLAG_HIDE_SPEAROW_BALL"
     },
     {
-      "local_id": "LOCALID_CHARMANDER_BALL",
+      "local_id": "LOCALID_RATTATA_BALL",
       "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL",
       "x": 10,
@@ -114,8 +114,8 @@
       "movement_range_y": 1,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "PalletTown_ProfessorOaksLab_EventScript_CharmanderBall",
-      "flag": "FLAG_HIDE_CHARMANDER_BALL"
+      "script": "PalletTown_ProfessorOaksLab_EventScript_RattataBall",
+      "flag": "FLAG_HIDE_RATTATA_BALL"
     },
     {
       "local_id": "LOCALID_OAKS_LAB_RIVAL",

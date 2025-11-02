@@ -100,23 +100,23 @@ PalletTown_ProfessorOaksLab_Text_OakHeyDontGoAwayYet::
     .string "OAK: Hey!\n"
     .string "Don't go away yet!$"
 
-PalletTown_ProfessorOaksLab_Text_OakChoosingCharmander::
-    .string "Ah! CHARMANDER is your choice.\n"
+PalletTown_ProfessorOaksLab_Text_OakChoosingRattata::
+    .string "Ah! Rattata is your choice.\n"
     .string "You should raise it patiently.\p"
     .string "So, {PLAYER}, you're claiming the\n"
-    .string "FIRE POKéMON CHARMANDER?$"
+    .string "NORMAL POKéMON Rattata?$"
 
-PalletTown_ProfessorOaksLab_Text_OakChoosingSquirtle::
-    .string "Hm! SQUIRTLE is your choice.\n"
+PalletTown_ProfessorOaksLab_Text_OakChoosingSpearow::
+    .string "Hm! Spearow is your choice.\n"
     .string "It's one worth raising.\p"
     .string "So, {PLAYER}, you've decided on the\n"
-    .string "WATER POKéMON SQUIRTLE?$"
+    .string "NORMAL/FLYING POKéMON Spearow?$"
 
-PalletTown_ProfessorOaksLab_Text_OakChoosingBulbasaur::
-    .string "I see! BULBASAUR is your choice.\n"
+PalletTown_ProfessorOaksLab_Text_OakChoosingPidgey::
+    .string "I see! Pidgey is your choice.\n"
     .string "It's very easy to raise.\p"
     .string "So, {PLAYER}, you want to go with\n"
-    .string "the GRASS POKéMON BULBASAUR?$"
+    .string "the NORMAL/FLYING POKéMON PIDGEY?$"
 
 PalletTown_ProfessorOaksLab_Text_OakThisMonIsEnergetic::
     .string "This POKéMON is really quite\n"
@@ -150,11 +150,8 @@ PalletTown_ProfessorOaksLab_Text_OakHaveSomethingForMe::
 PalletTown_ProfessorOaksLab_Text_DeliveredOaksParcel::
     .string "{PLAYER} delivered OAK'S PARCEL.$"
 
-PalletTown_ProfessorOaksLab_Text_OakCustomBallIOrdered::
-    .string "Ah! \n"
-    .string "It's the custom POKé BALL!\p"
-    .string "I had it on order.\n"
-    .string "Thank you!$"
+PalletTown_ProfessorOaksLab_Text_OakHello::
+    .string "OAK: Hello, {PLAYER}!$"
 
 PalletTown_ProfessorOaksLab_Text_OakHaveRequestForYouTwo::
     .string "OAK: Oh, right!\n"

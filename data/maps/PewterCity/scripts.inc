@@ -5,6 +5,8 @@ PewterCity_MapScripts::
 PewterCity_OnTransition::
 	setworldmapflag FLAG_WORLD_MAP_PEWTER_CITY
 	setvar VAR_MAP_SCENE_PEWTER_CITY_MUSEUM_1F, 0
+	setflag FLAG_HIDE_PEWTER_CITY_GYM_GUIDE
+	clearflag FLAG_HIDE_PEWTER_CITY_RUNNING_SHOES_GUY
 	end
 
 @ Impossible to speak to this NPC from a facing dir != DIR_EAST normally, so they arent checked
@@ -22,7 +24,6 @@ PewterCity_EventScript_GymGuide::
 	waitmovement 0
 	fadedefaultbgm
 	removeobject LOCALID_PEWTER_GYM_GUIDE
-	clearflag FLAG_HIDE_PEWTER_CITY_GYM_GUIDE
 	release
 	end
 
@@ -292,7 +293,6 @@ PewterCity_EventScript_GymGuideTrigger::
 	waitmovement 0
 	fadedefaultbgm
 	removeobject LOCALID_PEWTER_GYM_GUIDE
-	clearflag FLAG_HIDE_PEWTER_CITY_GYM_GUIDE
 	releaseall
 	end
 

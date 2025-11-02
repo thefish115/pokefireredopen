@@ -3252,7 +3252,7 @@ const struct Trainer gTrainers[] = {
         .aiFlags = AI_SCRIPT_CHECK_BAD_MOVE,
         .party = ITEM_DEFAULT_MOVES(sParty_BlackBeltDaisuke),
     },
-    [TRAINER_RIVAL_OAKS_LAB_SQUIRTLE] = {
+    [TRAINER_RIVAL_OAKS_LAB_PIDGEY] = {
         .trainerClass = TRAINER_CLASS_RIVAL_EARLY,
         .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_MALE,
         .trainerPic = TRAINER_PIC_RIVAL_EARLY,
@@ -3260,9 +3260,9 @@ const struct Trainer gTrainers[] = {
         .items = {},
         .doubleBattle = FALSE,
         .aiFlags = AI_SCRIPT_CHECK_BAD_MOVE | AI_SCRIPT_TRY_TO_FAINT | AI_SCRIPT_CHECK_VIABILITY,
-        .party = NO_ITEM_DEFAULT_MOVES(sParty_RivalOaksLabSquirtle),
+        .party = NO_ITEM_DEFAULT_MOVES(sParty_RivalOaksLabPidgey),
     },
-    [TRAINER_RIVAL_OAKS_LAB_BULBASAUR] = {
+    [TRAINER_RIVAL_OAKS_LAB_RATTATA] = {
         .trainerClass = TRAINER_CLASS_RIVAL_EARLY,
         .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_MALE,
         .trainerPic = TRAINER_PIC_RIVAL_EARLY,
@@ -3270,9 +3270,9 @@ const struct Trainer gTrainers[] = {
         .items = {},
         .doubleBattle = FALSE,
         .aiFlags = AI_SCRIPT_CHECK_BAD_MOVE | AI_SCRIPT_TRY_TO_FAINT | AI_SCRIPT_CHECK_VIABILITY,
-        .party = NO_ITEM_DEFAULT_MOVES(sParty_RivalOaksLabBulbasaur),
+        .party = NO_ITEM_DEFAULT_MOVES(sParty_RivalOaksLabRattata),
     },
-    [TRAINER_RIVAL_OAKS_LAB_CHARMANDER] = {
+    [TRAINER_RIVAL_ROUTE22_EARLY] = {
         .trainerClass = TRAINER_CLASS_RIVAL_EARLY,
         .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_MALE,
         .trainerPic = TRAINER_PIC_RIVAL_EARLY,
@@ -3280,17 +3280,7 @@ const struct Trainer gTrainers[] = {
         .items = {},
         .doubleBattle = FALSE,
         .aiFlags = AI_SCRIPT_CHECK_BAD_MOVE | AI_SCRIPT_TRY_TO_FAINT | AI_SCRIPT_CHECK_VIABILITY,
-        .party = NO_ITEM_DEFAULT_MOVES(sParty_RivalOaksLabCharmander),
-    },
-    [TRAINER_RIVAL_ROUTE22_EARLY_SQUIRTLE] = {
-        .trainerClass = TRAINER_CLASS_RIVAL_EARLY,
-        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_MALE,
-        .trainerPic = TRAINER_PIC_RIVAL_EARLY,
-        .trainerName = _("TERRY"),
-        .items = {},
-        .doubleBattle = FALSE,
-        .aiFlags = AI_SCRIPT_CHECK_BAD_MOVE | AI_SCRIPT_TRY_TO_FAINT | AI_SCRIPT_CHECK_VIABILITY,
-        .party = NO_ITEM_CUSTOM_MOVES(sParty_RivalRoute22EarlySquirtle),
+        .party = NO_ITEM_CUSTOM_MOVES(sParty_RivalRoute22Early),
     },
     [TRAINER_RIVAL_ROUTE22_EARLY_BULBASAUR] = {
         .trainerClass = TRAINER_CLASS_RIVAL_EARLY,
@@ -3312,7 +3302,7 @@ const struct Trainer gTrainers[] = {
         .aiFlags = AI_SCRIPT_CHECK_BAD_MOVE | AI_SCRIPT_TRY_TO_FAINT | AI_SCRIPT_CHECK_VIABILITY,
         .party = NO_ITEM_CUSTOM_MOVES(sParty_RivalRoute22EarlyCharmander),
     },
-    [TRAINER_RIVAL_CERULEAN_SQUIRTLE] = {
+    [TRAINER_RIVAL_CERULEAN] = {
         .trainerClass = TRAINER_CLASS_RIVAL_EARLY,
         .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_MALE,
         .trainerPic = TRAINER_PIC_RIVAL_EARLY,
@@ -3320,7 +3310,7 @@ const struct Trainer gTrainers[] = {
         .items = {},
         .doubleBattle = FALSE,
         .aiFlags = AI_SCRIPT_CHECK_BAD_MOVE | AI_SCRIPT_TRY_TO_FAINT | AI_SCRIPT_CHECK_VIABILITY,
-        .party = NO_ITEM_CUSTOM_MOVES(sParty_RivalCeruleanSquirtle),
+        .party = NO_ITEM_CUSTOM_MOVES(sParty_RivalCerulean),
     },
     [TRAINER_RIVAL_CERULEAN_BULBASAUR] = {
         .trainerClass = TRAINER_CLASS_RIVAL_EARLY,
