@@ -54,26 +54,9 @@ VermilionCity_PokemonFanClub_Text_ReceivedBikeVoucherFromChairman::
     .string "{PLAYER} received a BIKE VOUCHER\n"
     .string "from the CHAIRMAN.$"
 
-VermilionCity_PokemonFanClub_Text_ExplainBikeVoucher::
-    .string "Take that BIKE VOUCHER to the\n"
-    .string "BIKE SHOP in CERULEAN CITY.\p"
-    .string "Exchange that for a BICYCLE\n"
-    .string "free of charge!\p"
-    .string "Don't worry, my favorite FEAROW\n"
-    .string "will FLY me anywhere I need to go.\p"
-    .string "So, I have no need for a BICYCLE.\p"
-    .string "I hope you like cycling!$"
-
 VermilionCity_PokemonFanClub_Text_ComeBackToHearStory::
     .string "Oh. Come back when you want to\n"
     .string "hear my story!$"
-
-VermilionCity_PokemonFanClub_Text_DidntComeToSeeAboutMonsAgain::
-    .string "Hello, {PLAYER}!\p"
-    .string "Did you come see me about my\n"
-    .string "POKéMON again?\p"
-    .string "No?\n"
-    .string "Too bad!$"
 
 VermilionCity_PokemonFanClub_Text_MakeRoomForThis::
     .string "Make room for this!$"

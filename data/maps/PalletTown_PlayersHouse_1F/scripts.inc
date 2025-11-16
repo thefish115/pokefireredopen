@@ -4,6 +4,7 @@ PalletTown_PlayersHouse_1F_MapScripts::
 PalletTown_PlayersHouse_1F_EventScript_Mom::
 	lock
 	faceplayer
+	goto_if_unset FLAG_GOT_BIKE_VOUCHER, Moms_House_Give_Bike_Voucher
 	goto_if_set FLAG_BEAT_RIVAL_IN_OAKS_LAB, PalletTown_PlayersHouse_1F_EventScript_MomHeal
 	checkplayergender
 	call_if_eq VAR_RESULT, MALE, PalletTown_PlayersHouse_1F_EventScript_MomOakLookingForYouMale
@@ -11,6 +12,12 @@ PalletTown_PlayersHouse_1F_EventScript_Mom::
 	closemessage
 	applymovement LOCALID_MOM, Common_Movement_FaceOriginalDirection
 	waitmovement 0
+	release
+	end
+
+Moms_House_Give_Bike_Voucher::
+	giveitem_msg PalletTown_PlayersHouse_1F_Text_Mom_Bike, ITEM_BIKE_VOUCHER, 1, MUS_OBTAIN_KEY_ITEM
+	setflag FLAG_GOT_BIKE_VOUCHER
 	release
 	end
 

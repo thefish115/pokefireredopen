@@ -5,6 +5,12 @@ PalletTown_PlayersHouse_1F_Text_AllBoysLeaveOakLookingForYou::
     .string "Oh, yes. PROF. OAK, next door, was\n"
     .string "looking for you.$"
 
+PalletTown_PlayersHouse_1F_Text_Mom_Bike::
+    .string "MOM: I got you a Bike\n"
+    .string "Voucher!\l"
+    .string "Make sure you redeem it at the\p"
+    .string "shop in Cerulean City!$"
+
 PalletTown_PlayersHouse_1F_Text_AllGirlsLeaveOakLookingForYou::
     .string "MOM: …Right.\n"
     .string "All girls dream of traveling.\l"

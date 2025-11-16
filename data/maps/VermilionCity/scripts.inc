@@ -23,6 +23,13 @@ VermilionCity_Movement_ExitSSAnne::
 VermilionCity_OnTransition::
 	setworldmapflag FLAG_WORLD_MAP_VERMILION_CITY
 	call_if_set FLAG_TALKED_TO_OAKS_AIDE_IN_VERMILION, VermilionCity_EventScript_HideOaksAide
+	goto_if_eq VAR_MAP_SCENE_VERMILION_CITY, 3, VermilionCity_EventScript_Reset_SSAnne
+	end
+
+VermilionCity_EventScript_Reset_SSAnne::
+	setvar VAR_MAP_SCENE_VERMILION_CITY, 0
+	addobject LOCALID_SS_ANNE, MAP_SSANNE_EXTERIOR
+	clearflag FLAG_HIDE_SS_ANNE
 	end
 
 VermilionCity_EventScript_HideOaksAide::

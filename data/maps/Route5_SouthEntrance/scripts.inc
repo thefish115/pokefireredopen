@@ -47,7 +47,6 @@ Route5_SouthEntrance_EventScript_GuardDrinkTea::
 	call_if_eq VAR_TEMP_1, 1, Route5_SouthEntrance_EventScript_WalkToGuardMid
 	call_if_eq VAR_TEMP_1, 2, Route5_SouthEntrance_EventScript_WalkToGuardRight
 	msgbox Route5_SouthEntrance_Text_ThanksIllShareTeaWithGuards
-	setvar VAR_MAP_SCENE_ROUTE5_ROUTE6_ROUTE7_ROUTE8_GATES, 1
 	releaseall
 	end
 

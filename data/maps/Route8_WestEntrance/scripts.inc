@@ -59,7 +59,6 @@ Route8_WestEntrance_EventScript_GuardDrinkTea::
 	call_if_eq VAR_TEMP_1, 1, Route8_WestEntrance_EventScript_WalkToGuardMid
 	call_if_eq VAR_TEMP_1, 2, Route8_WestEntrance_EventScript_WalkToGuardBottom
 	msgbox Route8_WestEntrance_Text_ThanksIllShareTeaWithGuards
-	setvar VAR_MAP_SCENE_ROUTE5_ROUTE6_ROUTE7_ROUTE8_GATES, 1
 	releaseall
 	end
 
