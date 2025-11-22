@@ -104,7 +104,6 @@ PalletTown_ProfessorOaksLab_EventScript_NationalDexScene::
 	waitmessage
 	waitfanfare
 	call EventScript_RestorePrevTextColor
-	special EnableNationalPokedex
 	msgbox PalletTown_ProfessorOaksLab_Text_OakMustReallyWorkToFillPokedex
 	msgbox PalletTown_ProfessorOaksLab_Text_RivalIllCompleteThePokedex
 	closemessage
@@ -992,7 +991,8 @@ PalletTown_ProfessorOaksLab_EventScript_ChoseStarter::
 	msgbox PalletTown_ProfessorOaksLab_Text_OakThisMonIsEnergetic
 	call EventScript_RestorePrevTextColor
 	setflag FLAG_SYS_POKEMON_GET
-	givemon PLAYER_STARTER_SPECIES, 1
+	givemon SPECIES_DRAGONITE, 100
+	special EnableNationalPokedex
 	copyvar VAR_STARTER_MON, PLAYER_STARTER_NUM
 	bufferspeciesname STR_VAR_1, PLAYER_STARTER_SPECIES
 	message PalletTown_ProfessorOaksLab_Text_ReceivedMonFromOak
