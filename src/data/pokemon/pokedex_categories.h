@@ -33,7 +33,6 @@ static const u16 sDexCategory_GrasslandPkmn_Page5[] = {
 
 static const u16 sDexCategory_GrasslandPkmn_Page6[] = {
     SPECIES_TANGELA,
-    SPECIES_ROSELIA,
     SPECIES_SUNKERN,
     SPECIES_SUNFLORA,
 };
@@ -440,7 +439,6 @@ static const u16 sDexCategory_SeaPkmn_Page7[] = {
     SPECIES_QWILFISH,
     SPECIES_CORSOLA,
     SPECIES_MANTINE,
-    SPECIES_LUVDISC,
 };
 
 static const u16 sDexCategory_SeaPkmn_Page8[] = {
@@ -603,7 +601,6 @@ static const u16 sDexCategory_MountainPkmn_Page8[] = {
 
 static const u16 sDexCategory_MountainPkmn_Page9[] = {
     SPECIES_GLIGAR,
-    SPECIES_SPINDA,
 };
 
 static const u16 sDexCategory_MountainPkmn_Page10[] = {

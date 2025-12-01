@@ -1312,10 +1312,6 @@ Cry_Kecleon::
 	.incbin "sound/direct_sound_samples/cries/kecleon.bin"
 
 	.align 2
-Cry_Roselia::
-	.incbin "sound/direct_sound_samples/cries/roselia.bin"
-
-	.align 2
 Cry_Torkoal::
 	.incbin "sound/direct_sound_samples/cries/torkoal.bin"
 
@@ -1378,10 +1374,6 @@ Cry_Swellow::
 	.align 2
 Cry_Unused268::
 	.incbin "sound/direct_sound_samples/cries/unused_268.bin"
-
-	.align 2
-Cry_Spinda::
-	.incbin "sound/direct_sound_samples/cries/spinda.bin"
 
 	.align 2
 Cry_Torchic::
@@ -1774,10 +1766,6 @@ Cry_Aggron::
 	.align 2
 Cry_Relicanth::
 	.incbin "sound/direct_sound_samples/cries/relicanth.bin"
-
-	.align 2
-Cry_Luvdisc::
-	.incbin "sound/direct_sound_samples/cries/luvdisc.bin"
 
 	.align 2
 Cry_Groudon::

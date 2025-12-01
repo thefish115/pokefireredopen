@@ -935,7 +935,6 @@ static const u16 sEasyChatWordsByLetter_L[] = {
     EC_WORD_LUKEWARM,
     EC_POKEMON2(LUNATONE),
     EC_MOVE2(LUSTER_PURGE),
-    EC_POKEMON2(LUVDISC),
 };
 
 static const u16 sEasyChatWordsByLetter_M[] = {
@@ -1353,7 +1352,6 @@ static const u16 sEasyChatWordsByLetter_R[] = {
     EC_MOVE(ROLLOUT),
     EC_WORD_ROMANTIC,
     EC_WORD_ROOM,
-    EC_POKEMON2(ROSELIA),
     EC_WORD_ROUGH_SKIN,
     EC_WORD_RPG,
     EC_WORD_RUBY,
@@ -1542,7 +1540,6 @@ static const u16 sEasyChatWordsByLetter_S[] = {
     EC_MOVE2(SPIKE_CANNON),
     EC_MOVE2(SPIKES),
     EC_POKEMON(SPINARAK),
-    EC_POKEMON2(SPINDA),
     EC_WORD_SPIRALING,
     EC_WORD_SPIRIT,
     EC_MOVE2(SPIT_UP),

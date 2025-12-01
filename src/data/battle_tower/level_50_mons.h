@@ -274,19 +274,6 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
 		.nature = NATURE_BOLD,
 	},
 	{
-		.species = SPECIES_SPINDA,
-		.heldItem = BATTLE_TOWER_ITEM_CHERI_BERRY,
-		.teamFlags = 0x4A,
-		.moves = {
-			MOVE_TEETER_DANCE,
-			MOVE_FLAIL,
-			MOVE_PSYCH_UP,
-			MOVE_DOUBLE_EDGE
-		},
-		.evSpread = F_EV_SPREAD_SPEED | F_EV_SPREAD_HP,
-		.nature = NATURE_CALM,
-	},
-	{
 		.species = SPECIES_SEVIPER,
 		.heldItem = BATTLE_TOWER_ITEM_POISON_BARB,
 		.teamFlags = 0x09,
@@ -350,19 +337,6 @@ const struct BattleTowerPokemonTemplate gBattleTowerLevel50Mons[] =
 		},
 		.evSpread = F_EV_SPREAD_SPEED | F_EV_SPREAD_DEFENSE,
 		.nature = NATURE_HASTY,
-	},
-	{
-		.species = SPECIES_ROSELIA,
-		.heldItem = BATTLE_TOWER_ITEM_MIRACLE_SEED,
-		.teamFlags = 0x0A,
-		.moves = {
-			MOVE_GROWTH,
-			MOVE_MEGA_DRAIN,
-			MOVE_TOXIC,
-			MOVE_CUT
-		},
-		.evSpread = F_EV_SPREAD_SP_DEFENSE | F_EV_SPREAD_SP_ATTACK,
-		.nature = NATURE_NAUGHTY,
 	},
 	{
 		.species = SPECIES_SWALOT,

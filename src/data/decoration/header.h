@@ -945,15 +945,6 @@ const struct Decoration gDecorations[] = {
         DecorDesc_ZIGZAG_CUSHION,
         DecorGfx_ZIGZAG_CUSHION
     }, {
-        DECOR_SPIN_CUSHION,
-        _("SPIN CUSHION"),
-        DECORPERM_SPRITE,
-        DECORSHAPE_1x1,
-        DECORCAT_CUSHION,
-        2000,
-        DecorDesc_SPIN_CUSHION,
-        DecorGfx_SPIN_CUSHION
-    }, {
         DECOR_DIAMOND_CUSHION,
         _("DIAMOND CUSHION"),
         DECORPERM_SPRITE,

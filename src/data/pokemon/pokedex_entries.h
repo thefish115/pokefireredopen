@@ -4095,19 +4095,6 @@ const struct PokedexEntry gPokedexEntries[] =
         .trainerOffset = -2,
     },
 
-    [NATIONAL_DEX_ROSELIA] =
-    {
-        .categoryName = _("THORN"),
-        .height = 3,
-        .weight = 20,
-        .description = gRoseliaPokedexText,
-        .unusedDescription = gRoseliaPokedexTextUnused,
-        .pokemonScale = 677,
-        .pokemonOffset = 20,
-        .trainerScale = 256,
-        .trainerOffset = -2,
-    },
-
     [NATIONAL_DEX_GULPIN] =
     {
         .categoryName = _("STOMACH"),
@@ -4246,19 +4233,6 @@ const struct PokedexEntry gPokedexEntries[] =
         .description = gGrumpigPokedexText,
         .unusedDescription = gGrumpigPokedexTextUnused,
         .pokemonScale = 358,
-        .pokemonOffset = 9,
-        .trainerScale = 256,
-        .trainerOffset = -2,
-    },
-
-    [NATIONAL_DEX_SPINDA] =
-    {
-        .categoryName = _("SPOT PANDA"),
-        .height = 11,
-        .weight = 50,
-        .description = gSpindaPokedexText,
-        .unusedDescription = gSpindaPokedexTextUnused,
-        .pokemonScale = 321,
         .pokemonOffset = 9,
         .trainerScale = 256,
         .trainerOffset = -2,
@@ -4806,19 +4780,6 @@ const struct PokedexEntry gPokedexEntries[] =
         .unusedDescription = gRelicanthPokedexTextUnused,
         .pokemonScale = 316,
         .pokemonOffset = 5,
-        .trainerScale = 256,
-        .trainerOffset = -2,
-    },
-
-    [NATIONAL_DEX_LUVDISC] =
-    {
-        .categoryName = _("RENDEZVOUS"),
-        .height = 6,
-        .weight = 87,
-        .description = gLuvdiscPokedexText,
-        .unusedDescription = gLuvdiscPokedexTextUnused,
-        .pokemonScale = 371,
-        .pokemonOffset = 2,
         .trainerScale = 256,
         .trainerOffset = -2,
     },

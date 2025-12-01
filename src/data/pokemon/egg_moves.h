@@ -976,16 +976,6 @@ const u16 gEggMoves[] = {
               MOVE_FALSE_SWIPE,
               MOVE_HELPING_HAND),
 
-    egg_moves(SPINDA,
-              MOVE_ENCORE,
-              MOVE_ROCK_SLIDE,
-              MOVE_ASSIST,
-              MOVE_DISABLE,
-              MOVE_BATON_PASS,
-              MOVE_WISH,
-              MOVE_TRICK,
-              MOVE_SMELLING_SALT),
-
     egg_moves(WINGULL,
               MOVE_MIST,
               MOVE_TWISTER,
@@ -1045,12 +1035,6 @@ const u16 gEggMoves[] = {
               MOVE_THRASH,
               MOVE_WHIRLPOOL,
               MOVE_SPARK),
-
-    egg_moves(LUVDISC,
-              MOVE_SPLASH,
-              MOVE_SUPERSONIC,
-              MOVE_WATER_SPORT,
-              MOVE_MUD_SPORT),
 
     egg_moves(CORPHISH,
               MOVE_MUD_SPORT,
@@ -1173,12 +1157,6 @@ const u16 gEggMoves[] = {
               MOVE_GRUDGE,
               MOVE_MEMENTO,
               MOVE_FAINT_ATTACK),
-
-    egg_moves(ROSELIA,
-              MOVE_SPIKES,
-              MOVE_SYNTHESIS,
-              MOVE_PIN_MISSILE,
-              MOVE_COTTON_SPORE),
 
     egg_moves(SLAKOTH,
               MOVE_PURSUIT,

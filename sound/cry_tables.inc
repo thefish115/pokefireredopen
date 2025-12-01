@@ -252,7 +252,6 @@ gCryTable::
 	cry Cry_HoOh
 	cry Cry_Celebi
 	cry Cry_Kecleon
-	cry Cry_Roselia
 	cry Cry_Torkoal
 	cry Cry_Electrike
 	cry Cry_Manectric
@@ -269,7 +268,6 @@ gCryTable::
 	cry Cry_Taillow
 	cry Cry_Swellow
 	cry Cry_Unused268
-	cry Cry_Spinda
 	cry Cry_Torchic
 	cry Cry_Combusken
 	cry Cry_Blaziken
@@ -368,7 +366,6 @@ gCryTable::
 	cry Cry_Lairon
 	cry Cry_Aggron
 	cry Cry_Relicanth
-	cry Cry_Luvdisc
 	cry Cry_Groudon
 	cry Cry_Kyogre
 	cry Cry_Rayquaza
@@ -643,7 +640,6 @@ gCryTable_Reverse::
 	cry_reverse Cry_HoOh
 	cry_reverse Cry_Celebi
 	cry_reverse Cry_Kecleon
-	cry_reverse Cry_Roselia
 	cry_reverse Cry_Torkoal
 	cry_reverse Cry_Electrike
 	cry_reverse Cry_Manectric
@@ -660,7 +656,6 @@ gCryTable_Reverse::
 	cry_reverse Cry_Taillow
 	cry_reverse Cry_Swellow
 	cry_reverse Cry_Unused268
-	cry_reverse Cry_Spinda
 	cry_reverse Cry_Torchic
 	cry_reverse Cry_Combusken
 	cry_reverse Cry_Blaziken
@@ -759,7 +754,6 @@ gCryTable_Reverse::
 	cry_reverse Cry_Lairon
 	cry_reverse Cry_Aggron
 	cry_reverse Cry_Relicanth
-	cry_reverse Cry_Luvdisc
 	cry_reverse Cry_Groudon
 	cry_reverse Cry_Kyogre
 	cry_reverse Cry_Rayquaza

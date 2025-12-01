@@ -1540,11 +1540,6 @@ const struct MonCoords gMonFrontPicCoords[] =
         .size = MON_COORDS_SIZE(56, 56),
         .y_offset = 4,
     },
-    [SPECIES_SPINDA] =
-    {
-        .size = MON_COORDS_SIZE(48, 56),
-        .y_offset = 8,
-    },
     [SPECIES_WINGULL] =
     {
         .size = MON_COORDS_SIZE(64, 32),
@@ -1624,11 +1619,6 @@ const struct MonCoords gMonFrontPicCoords[] =
     {
         .size = MON_COORDS_SIZE(56, 48),
         .y_offset = 9,
-    },
-    [SPECIES_LUVDISC] =
-    {
-        .size = MON_COORDS_SIZE(32, 48),
-        .y_offset = 24,
     },
     [SPECIES_CORPHISH] =
     {
@@ -1814,11 +1804,6 @@ const struct MonCoords gMonFrontPicCoords[] =
     {
         .size = MON_COORDS_SIZE(56, 56),
         .y_offset = 5,
-    },
-    [SPECIES_ROSELIA] =
-    {
-        .size = MON_COORDS_SIZE(56, 48),
-        .y_offset = 8,
     },
     [SPECIES_SLAKOTH] =
     {

@@ -2215,13 +2215,6 @@ const u8 gIllumisePokedexText[] = _(
 
 const u8 gIllumisePokedexTextUnused[] = _("");
 
-const u8 gRoseliaPokedexText[] = _(
-    "Its flowers give off a relaxing fragrance.\n"
-    "The stronger its aroma, the healthier\n"
-    "the ROSELIA is.");
-
-const u8 gRoseliaPokedexTextUnused[] = _("");
-
 const u8 gGulpinPokedexText[] = _(
     "There is nothing its stomach can't digest.\n"
     "While it is digesting, vile, overpowering\n"
@@ -2298,13 +2291,6 @@ const u8 gGrumpigPokedexText[] = _(
     "forehead are precious gems.");
 
 const u8 gGrumpigPokedexTextUnused[] = _("");
-
-const u8 gSpindaPokedexText[] = _(
-    "No two SPINDA are said to have identical\n"
-    "patterns. It confuses foes with its\n"
-    "stumbling motions.");
-
-const u8 gSpindaPokedexTextUnused[] = _("");
 
 const u8 gTrapinchPokedexText[] = _(
     "It lives in arid deserts. It makes a\n"
@@ -2599,13 +2585,6 @@ const u8 gRelicanthPokedexText[] = _(
     "during a deep-sea exploration.");
 
 const u8 gRelicanthPokedexTextUnused[] = _("");
-
-const u8 gLuvdiscPokedexText[] = _(
-    "During the spawning season, countless\n"
-    "LUVDISC congregate at coral reefs,\n"
-    "turning the waters pink.");
-
-const u8 gLuvdiscPokedexTextUnused[] = _("");
 
 const u8 gBagonPokedexText[] = _(
     "Its steel-hard head can shatter boulders.\n"
