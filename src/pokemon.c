@@ -5065,6 +5065,43 @@ u16 GetEvolutionTargetSpecies(struct Pokemon *mon, u8 type, u16 evolutionItem)
                  && heldItem == ITEM_KINGS_ROCK)
                     targetSpecies = gEvolutionTable[species][i].targetSpecies;
                 break;
+            case EVO_LVL_DS_TOOTH:
+                if (gEvolutionTable[species][i].param <= level
+                 && heldItem == ITEM_DEEP_SEA_TOOTH)
+                    targetSpecies = gEvolutionTable[species][i].targetSpecies;
+                break;
+            case EVO_LVL_DS_SCALE:
+                if (gEvolutionTable[species][i].param <= level
+                 && heldItem == ITEM_DEEP_SEA_SCALE)
+                    targetSpecies = gEvolutionTable[species][i].targetSpecies;
+                break;
+            case EVO_LVL_UP_GRADE:
+                if (gEvolutionTable[species][i].param <= level
+                 && heldItem == ITEM_UP_GRADE)
+                    targetSpecies = gEvolutionTable[species][i].targetSpecies;
+                break;
+            case EVO_LVL_METAL_COAT:
+                if (gEvolutionTable[species][i].param <= level
+                 && heldItem == ITEM_METAL_COAT)
+                    targetSpecies = gEvolutionTable[species][i].targetSpecies;
+                break;
+            case EVO_LVL_DRAGON_SCALE:
+                if (gEvolutionTable[species][i].param <= level
+                 && heldItem == ITEM_DRAGON_SCALE)
+                    targetSpecies = gEvolutionTable[species][i].targetSpecies;
+                break;
+            case EVO_LVL_KR_D_GE_SD:
+                if (gEvolutionTable[species][i].param <= level
+                 && heldItem == ITEM_KINGS_ROCK
+                 && GetMonData(mon, MON_DATA_DEF, NULL) >= GetMonData(mon, MON_DATA_SPDEF, NULL))
+                    targetSpecies = gEvolutionTable[species][i].targetSpecies;
+                break;
+            case EVO_LVL_KR_D_LT_SD:
+                if (gEvolutionTable[species][i].param <= level
+                 && heldItem == ITEM_KINGS_ROCK
+                 && GetMonData(mon, MON_DATA_DEF, NULL) < GetMonData(mon, MON_DATA_SPDEF, NULL))
+                    targetSpecies = gEvolutionTable[species][i].targetSpecies;
+                break;
             case EVO_LEVEL_ATK_GT_DEF:
                 if (gEvolutionTable[species][i].param <= level)
                     if (GetMonData(mon, MON_DATA_ATK, NULL) > GetMonData(mon, MON_DATA_DEF, NULL))
@@ -5095,31 +5132,6 @@ u16 GetEvolutionTargetSpecies(struct Pokemon *mon, u8 type, u16 evolutionItem)
             case EVO_BEAUTY:
                 if (gEvolutionTable[species][i].param <= beauty)
                     targetSpecies = gEvolutionTable[species][i].targetSpecies;
-                break;
-            }
-        }
-        break;
-    case EVO_MODE_TRADE:
-        for (i = 0; i < EVOS_PER_MON; i++)
-        {
-            switch (gEvolutionTable[species][i].method)
-            {
-            case EVO_TRADE:
-                targetSpecies = gEvolutionTable[species][i].targetSpecies;
-                break;
-            case EVO_TRADE_ITEM:
-                if (gEvolutionTable[species][i].param == heldItem)
-                {
-                    targetSpecies = gEvolutionTable[species][i].targetSpecies;
-                    
-                    // Prevent cross-generational evolutions like Scizor and Steelix until the National Pokedex is obtained
-                    if (IsNationalPokedexEnabled() || targetSpecies <= KANTO_SPECIES_END)
-                    {
-                        heldItem = ITEM_NONE;
-                        SetMonData(mon, MON_DATA_HELD_ITEM, &heldItem);
-                        targetSpecies = gEvolutionTable[species][i].targetSpecies;
-                    }
-                }
                 break;
             }
         }
