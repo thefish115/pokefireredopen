@@ -1,5 +1,5 @@
 .equ BILL_IN_TELEPORTER,     FLAG_TEMP_2
-.equ RETURN_AFTER_SS_TICKET, FLAG_TEMP_3
+.equ RETURN_AFTER_HELPING_BILL, FLAG_TEMP_3
 
 Route25_SeaCottage_MapScripts::
 	map_script MAP_SCRIPT_ON_TRANSITION, Route25_SeaCottage_OnTransition
@@ -7,7 +7,7 @@ Route25_SeaCottage_MapScripts::
 
 Route25_SeaCottage_OnTransition::
 	call_if_unset FLAG_HELPED_BILL_IN_SEA_COTTAGE, Route25_SeaCottage_EventScript_HideClefairyBill
-	call_if_set FLAG_GOT_SS_TICKET, Route25_SeaCottage_EventScript_SetReturnedAfterSSTicket
+	call_if_set FLAG_HELPED_BILL_IN_SEA_COTTAGE, Route25_SeaCottage_EventScript_SetReturnedAfterSSTicket
 	end
 
 Route25_SeaCottage_EventScript_HideClefairyBill::
@@ -16,15 +16,14 @@ Route25_SeaCottage_EventScript_HideClefairyBill::
 	return
 
 Route25_SeaCottage_EventScript_SetReturnedAfterSSTicket::
-	setflag RETURN_AFTER_SS_TICKET
+	setflag RETURN_AFTER_HELPING_BILL
 	return
 
 Route25_SeaCottage_EventScript_Bill::
 	lock
 	faceplayer
-	goto_if_set RETURN_AFTER_SS_TICKET, Route25_SeaCottage_EventScript_BillGoLookAtPC
-	goto_if_set FLAG_GOT_SS_TICKET, Route25_SeaCottage_EventScript_BillGoToSSAnne
-	goto_if_set FLAG_HELPED_BILL_IN_SEA_COTTAGE, Route25_SeaCottage_EventScript_BillGiveSSTicket
+	goto_if_set RETURN_AFTER_HELPING_BILL, Route25_SeaCottage_EventScript_BillGoLookAtPC
+	goto_if_set FLAG_HELPED_BILL_IN_SEA_COTTAGE, Route25_SeaCottage_EventScript_BillThank
 	checkplayergender
 	goto_if_eq VAR_RESULT, MALE, Route25_SeaCottage_EventScript_BillAskForHelpMale
 	goto_if_eq VAR_RESULT, FEMALE, Route25_SeaCottage_EventScript_BillAskForHelpFemale
@@ -86,24 +85,15 @@ Route25_SeaCottage_EventScript_BillWalkToTeleporter::
 	waitmovement 0
 	return
 
-Route25_SeaCottage_EventScript_BillGoToSSAnne::
-	msgbox Route25_SeaCottage_Text_SSAnnePartyYouGoInstead
-	release
-	end
-
-Route25_SeaCottage_EventScript_BillGiveSSTicket::
+Route25_SeaCottage_EventScript_BillThank::
 	famechecker FAMECHECKER_BILL, FCPICKSTATE_COLORED, UpdatePickStateFromSpecialVar8005
 	checkplayergender
 	call_if_eq VAR_RESULT, MALE, Route25_SeaCottage_EventScript_BillThanksMale
 	call_if_eq VAR_RESULT, FEMALE, Route25_SeaCottage_EventScript_BillThanksFemale
-	checkitemspace ITEM_SS_TICKET
-	goto_if_eq VAR_RESULT, FALSE, Route25_SeaCottage_EventScript_NoRoomForSSTicket
-	giveitem_msg Route25_SeaCottage_Text_ReceivedSSTicketFromBill, ITEM_SS_TICKET, 1, MUS_OBTAIN_KEY_ITEM
-	setflag FLAG_GOT_SS_TICKET_DUP
 	setflag FLAG_HIDE_NUGGET_BRIDGE_ROCKET
-	setflag FLAG_GOT_SS_TICKET
 	setflag FLAG_SYS_NOT_SOMEONES_PC
-	goto Route25_SeaCottage_EventScript_BillGoToSSAnne
+	msgbox Route25_SeaCottage_Text_SSAnneParty
+	release
 	end
 
 Route25_SeaCottage_EventScript_BillThanksMale::
@@ -113,11 +103,6 @@ Route25_SeaCottage_EventScript_BillThanksMale::
 Route25_SeaCottage_EventScript_BillThanksFemale::
 	msgbox Route25_SeaCottage_Text_ThanksLadyTakeThis
 	return
-
-Route25_SeaCottage_EventScript_NoRoomForSSTicket::
-	msgbox Route25_SeaCottage_Text_YouveGotTooMuchStuff
-	release
-	end
 
 Route25_SeaCottage_EventScript_BillGoLookAtPC::
 	msgbox Route25_SeaCottage_Text_CheckOutRareMonsOnPC
@@ -143,7 +128,7 @@ Route25_SeaCottage_Movement_BillEnterTeleporter::
 
 Route25_SeaCottage_EventScript_Computer::
 	lockall
-	goto_if_set RETURN_AFTER_SS_TICKET, Route25_SeaCottage_EventScript_OpenBillsMonList
+	goto_if_set FLAG_HELPED_BILL_IN_SEA_COTTAGE, Route25_SeaCottage_EventScript_OpenBillsMonList
 	goto_if_set BILL_IN_TELEPORTER, Route25_SeaCottage_EventScript_RunCellSeparator
 	msgbox Route25_SeaCottage_Text_TeleporterIsDisplayed
 	releaseall

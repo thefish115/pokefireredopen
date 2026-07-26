@@ -55,37 +55,30 @@ Route25_SeaCottage_Text_ThanksBudTakeThis::
     .string "Thanks, bud! I owe you one!\p"
     .string "So, did you come to see my\n"
     .string "POKéMON collection?\p"
-    .string "You didn't?\n"
-    .string "That's a bummer.\p"
-    .string "I've got to thank you…\n"
-    .string "Oh, here, maybe this'll do.$"
+    .string "You can check my favorites\n"
+    .string "out on my PC if you want!\p"
+    .string "Since it looks like you're\n"
+    .string "a trainer, maybe this'll do\p"
+    .string "as thanks. It's my fav.$"
 
 Route25_SeaCottage_Text_ThanksLadyTakeThis::
     .string "BILL: Yeehah!\n"
     .string "Thanks, lady! I owe you one!\p"
     .string "So, did you come to see my\n"
     .string "POKéMON collection?\p"
-    .string "You didn't?\n"
-    .string "That's a bummer.\p"
-    .string "I've got to thank you…\n"
-    .string "Oh, here, maybe this'll do.$"
+    .string "You can check my favorites\n"
+    .string "out on my PC if you want!\p"
+    .string "Since it looks like you're\n"
+    .string "a trainer, maybe this'll do\p"
+    .string "as thanks. It's my fav.$"
 
-Route25_SeaCottage_Text_ReceivedSSTicketFromBill::
-    .string "{PLAYER} received an S.S. TICKET\n"
-    .string "from BILL.$"
-
-Route25_SeaCottage_Text_YouveGotTooMuchStuff::
-    .string "You've got too much stuff!$"
-
-Route25_SeaCottage_Text_SSAnnePartyYouGoInstead::
-    .string "That cruise ship S.S. ANNE is in\n"
+Route25_SeaCottage_Text_SSAnneParty::
+    .string "There's a cruise ship in\n"
     .string "VERMILION CITY.\p"
     .string "I hear there are lots of TRAINERS\n"
     .string "on board, too.\p"
     .string "They invited me to their party, but\n"
-    .string "I can't stand fancy do's.\p"
-    .string "Why don't you go instead of me?\n"
-    .string "Go on and have a good time.$"
+    .string "I can't stand fancy do's.$"
 
 Route25_SeaCottage_Text_CheckOutRareMonsOnPC::
     .string "BILL: Feel like checking out some\n"

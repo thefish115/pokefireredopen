@@ -11,6 +11,12 @@ PalletTown_PlayersHouse_1F_Text_Mom_Bike::
     .string "Make sure you redeem it at the\p"
     .string "shop in Cerulean City!$"
 
+PalletTown_PlayersHouse_1F_Text_Mom_SSTicket::
+    .string "MOM: My friend BILL gave\n"
+    .string "me an S.S. ANNE ticket!\l"
+    .string "I get seasick so you\p"
+    .string "take it!$"
+
 PalletTown_PlayersHouse_1F_Text_AllGirlsLeaveOakLookingForYou::
     .string "MOM: …Right.\n"
     .string "All girls dream of traveling.\l"
