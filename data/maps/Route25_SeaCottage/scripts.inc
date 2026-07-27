@@ -1,4 +1,5 @@
 .equ BILL_IN_TELEPORTER,     FLAG_TEMP_2
+.equ EEVEE_ACCEPT_STATUS,	 2
 
 Route25_SeaCottage_MapScripts::
 	map_script MAP_SCRIPT_ON_TRANSITION, Route25_SeaCottage_OnTransition
@@ -89,9 +90,10 @@ Route25_SeaCottage_EventScript_BillThank::
 	call_if_eq VAR_RESULT, MALE, Route25_SeaCottage_EventScript_BillThanksMale
 	call_if_eq VAR_RESULT, FEMALE, Route25_SeaCottage_EventScript_BillThanksFemale
 	givemon SPECIES_EEVEE, 5
-	goto_if_eq VAR_RESULT, 0, Route25_SeaCottage_EventScript_GetEeveeParty
-	goto_if_eq VAR_RESULT, 1, Route25_SeaCottage_EventScript_GetEeveePC
-	goto_if_eq VAR_RESULT, 2, EventScript_NoMoreRoomForPokemon
+	setvar EEVEE_ACCEPT_STATUS, VAR_RESULT
+	goto_if_eq EEVEE_ACCEPT_STATUS, 0, Route25_SeaCottage_EventScript_GetEeveeParty
+	goto_if_eq EEVEE_ACCEPT_STATUS, 1, Route25_SeaCottage_EventScript_GetEeveePC
+	goto_if_eq EEVEE_ACCEPT_STATUS, 2, EventScript_NoMoreRoomForPokemon
 	setflag FLAG_HIDE_NUGGET_BRIDGE_ROCKET
 	setflag FLAG_SYS_NOT_SOMEONES_PC
 	msgbox Route25_SeaCottage_Text_SSAnneParty
@@ -115,7 +117,7 @@ Route25_SeaCottage_EventScript_GetEeveeParty::
 	bufferspeciesname STR_VAR_1, SPECIES_EEVEE
 	msgbox Text_GiveNicknameToThisMon, MSGBOX_YESNO
 	goto_if_eq VAR_RESULT, YES, Route25_SeaCottage_EventScript_NameLastPartyMon
-	end
+	return
 
 Route25_SeaCottage_EventScript_NameLastPartyMon::
 	call EventScript_GetGiftMonPartySlot
@@ -132,7 +134,7 @@ Route25_SeaCottage_EventScript_GetEeveePC::
 	msgbox Text_GiveNicknameToThisMon, MSGBOX_YESNO
 	goto_if_eq VAR_RESULT, YES, EventScript_NameReceivedBoxMon
 	call EventScript_TransferredToPC
-	end
+	return
 
 Route25_SeaCottage_EventScript_BillGoLookAtPC::
 	msgbox Route25_SeaCottage_Text_CheckOutRareMonsOnPC
