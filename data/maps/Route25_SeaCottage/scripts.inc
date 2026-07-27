@@ -90,6 +90,7 @@ Route25_SeaCottage_EventScript_BillThank::
 	checkplayergender
 	call_if_eq VAR_RESULT, MALE, Route25_SeaCottage_EventScript_BillThanksMale
 	call_if_eq VAR_RESULT, FEMALE, Route25_SeaCottage_EventScript_BillThanksFemale
+	setvar VAR_TEMP_1, SPECIES_EEVEE
 	givemon SPECIES_EEVEE, 5
 	goto_if_eq VAR_RESULT, 0, Route25_SeaCottage_EventScript_GetEeveeParty
 	goto_if_eq VAR_RESULT, 1, Route25_SeaCottage_EventScript_GetEeveePC
@@ -132,10 +133,9 @@ Route25_SeaCottage_EventScript_GetEeveePC::
 	waitfanfare
 	bufferspeciesname STR_VAR_1, SPECIES_EEVEE
 	msgbox Text_GiveNicknameToThisMon, MSGBOX_YESNO
-	call_if_eq VAR_RESULT, YES, EventScript_NameReceivedBoxMon
+	call_if_eq VAR_RESULT, NO, EventScript_TransferredToPC
+	call EventScript_NameReceivedBoxMon
 	call EventScript_TransferredToPC
-	closemessage
-	release
 	end
 
 Route25_SeaCottage_EventScript_BillGoLookAtPC::

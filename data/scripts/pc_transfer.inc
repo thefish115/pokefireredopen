@@ -13,8 +13,8 @@ EventScript_NameReceivedBoxMon::
 	return
 
 EventScript_TransferredToPC::
-	bufferspeciesname STR_VAR_2, STR_VAR_1
 	bufferboxname STR_VAR_1, VAR_PC_BOX_TO_SEND_MON
+	bufferspeciesname STR_VAR_2, VAR_TEMP_1
 	call_if_unset FLAG_SYS_NOT_SOMEONES_PC, EventScript_TransferredSomeonesPC
 	call_if_set FLAG_SYS_NOT_SOMEONES_PC, EventScript_TransferredBillsPC
 	return
