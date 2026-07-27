@@ -1,5 +1,4 @@
 .equ BILL_IN_TELEPORTER,     FLAG_TEMP_2
-.equ EEVEE_ACCEPT_STATUS,	 2
 
 Route25_SeaCottage_MapScripts::
 	map_script MAP_SCRIPT_ON_TRANSITION, Route25_SeaCottage_OnTransition
@@ -92,10 +91,10 @@ Route25_SeaCottage_EventScript_BillThank::
 	call_if_eq VAR_RESULT, MALE, Route25_SeaCottage_EventScript_BillThanksMale
 	call_if_eq VAR_RESULT, FEMALE, Route25_SeaCottage_EventScript_BillThanksFemale
 	givemon SPECIES_EEVEE, 5
-	setvar EEVEE_ACCEPT_STATUS, VAR_RESULT
-	goto_if_eq EEVEE_ACCEPT_STATUS, 0, Route25_SeaCottage_EventScript_GetEeveeParty
-	goto_if_eq EEVEE_ACCEPT_STATUS, 1, Route25_SeaCottage_EventScript_GetEeveePC
-	goto_if_eq EEVEE_ACCEPT_STATUS, 2, EventScript_NoMoreRoomForPokemon
+	setvar VAR_TEMP_2, VAR_RESULT
+	goto_if_eq VAR_TEMP_2, 0, Route25_SeaCottage_EventScript_GetEeveeParty
+	goto_if_eq VAR_TEMP_2, 1, Route25_SeaCottage_EventScript_GetEeveePC
+	goto_if_eq VAR_TEMP_2, 2, EventScript_NoMoreRoomForPokemon
 	closemessage
 	release
 	end
