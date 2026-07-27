@@ -50,6 +50,9 @@ Route25_SeaCottage_Text_NoPleaseBeautiful::
     .string "Okay?\l"
     .string "All right!$"
 
+Route25_SeaCottage_Text_ObtainedAnEevee::
+    .string "{PLAYER} obtained an EEVEE!$"
+
 Route25_SeaCottage_Text_ThanksBudTakeThis::
     .string "BILL: Yeehah!\n"
     .string "Thanks, bud! I owe you one!\p"
