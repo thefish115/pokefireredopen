@@ -7,9 +7,6 @@ CeladonCity_Condominiums_1F_EventScript_TeaWoman::
 	goto_if_set FLAG_TALKED_TO_TEA_LADY_AFTER_HOF, CeladonCity_Condominiums_1F_EventScript_TeaWomanAfterTea
 	goto_if_set FLAG_SYS_GAME_CLEAR, CeladonCity_Condominiums_1F_EventScript_TeaWomanMentionDaisy
 	goto_if_set FLAG_GOT_TEA, CeladonCity_Condominiums_1F_EventScript_TeaWomanAfterTea
-	msgbox CeladonCity_Condominiums_1F_Text_TryThisDrinkInstead
-	goto_if_eq VAR_RESULT, FALSE, EventScript_BagIsFull
-	msgbox CeladonCity_Condominiums_1F_Text_NothingBeatsThirstLikeTea
 	release
 	end
 

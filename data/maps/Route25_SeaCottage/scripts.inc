@@ -1,5 +1,4 @@
 .equ BILL_IN_TELEPORTER,     FLAG_TEMP_2
-.equ RETURN_AFTER_HELPING_BILL, FLAG_TEMP_3
 
 Route25_SeaCottage_MapScripts::
 	map_script MAP_SCRIPT_ON_TRANSITION, Route25_SeaCottage_OnTransition
@@ -7,7 +6,6 @@ Route25_SeaCottage_MapScripts::
 
 Route25_SeaCottage_OnTransition::
 	call_if_unset FLAG_HELPED_BILL_IN_SEA_COTTAGE, Route25_SeaCottage_EventScript_HideClefairyBill
-	call_if_set FLAG_HELPED_BILL_IN_SEA_COTTAGE, Route25_SeaCottage_EventScript_SetReturnedAfterSSTicket
 	end
 
 Route25_SeaCottage_EventScript_HideClefairyBill::
@@ -15,15 +13,15 @@ Route25_SeaCottage_EventScript_HideClefairyBill::
 	setobjectxyperm LOCALID_BILL_HUMAN, 3, 3
 	return
 
-Route25_SeaCottage_EventScript_SetReturnedAfterSSTicket::
-	setflag RETURN_AFTER_HELPING_BILL
-	return
-
 Route25_SeaCottage_EventScript_Bill::
 	lock
 	faceplayer
-	goto_if_set RETURN_AFTER_HELPING_BILL, Route25_SeaCottage_EventScript_BillGoLookAtPC
+	goto_if_set FLAG_GOT_EEVEE_FROM_BILL, Route25_SeaCottage_EventScript_BillGoLookAtPC
 	goto_if_set FLAG_HELPED_BILL_IN_SEA_COTTAGE, Route25_SeaCottage_EventScript_BillThank
+	goto_if_unset FLAG_HELPED_BILL_IN_SEA_COTTAGE, Route25_SeaCottage_EventScript_HelpBill
+	end
+
+Route25_SeaCottage_EventScript_HelpBill::
 	checkplayergender
 	goto_if_eq VAR_RESULT, MALE, Route25_SeaCottage_EventScript_BillAskForHelpMale
 	goto_if_eq VAR_RESULT, FEMALE, Route25_SeaCottage_EventScript_BillAskForHelpFemale
@@ -90,6 +88,7 @@ Route25_SeaCottage_EventScript_BillThank::
 	checkplayergender
 	call_if_eq VAR_RESULT, MALE, Route25_SeaCottage_EventScript_BillThanksMale
 	call_if_eq VAR_RESULT, FEMALE, Route25_SeaCottage_EventScript_BillThanksFemale
+	givemon SPECIES_EEVEE, 5
 	setflag FLAG_HIDE_NUGGET_BRIDGE_ROCKET
 	setflag FLAG_SYS_NOT_SOMEONES_PC
 	msgbox Route25_SeaCottage_Text_SSAnneParty

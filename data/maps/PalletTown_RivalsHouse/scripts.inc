@@ -142,8 +142,6 @@ PalletTown_RivalsHouse_EventScript_GiveTownMap::
 	waitmovement 0
 	delay 12
 	giveitem_msg PalletTown_RivalsHouse_Text_ReceivedTownMapFromDaisy, ITEM_TOWN_MAP, 1, MUS_OBTAIN_KEY_ITEM
-	setflag FLAG_GOT_TEA
-	setvar VAR_MAP_SCENE_ROUTE5_ROUTE6_ROUTE7_ROUTE8_GATES, 1
 	release
 	end
 

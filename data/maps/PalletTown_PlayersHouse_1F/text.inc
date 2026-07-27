@@ -12,10 +12,15 @@ PalletTown_PlayersHouse_1F_Text_Mom_Bike::
     .string "shop in Cerulean City!$"
 
 PalletTown_PlayersHouse_1F_Text_Mom_SSTicket::
-    .string "MOM: My friend BILL gave\n"
+    .string "My friend BILL gave\n"
     .string "me an S.S. ANNE ticket!\l"
     .string "I get seasick so you\p"
     .string "take it!$"
+
+PalletTown_PlayersHouse_1F_Text_Mom_Tea::
+    .string "Take this, too!\n"
+    .string "Just in case you\l"
+    .string "get thirsty.$"
 
 PalletTown_PlayersHouse_1F_Text_AllGirlsLeaveOakLookingForYou::
     .string "MOM: …Right.\n"
