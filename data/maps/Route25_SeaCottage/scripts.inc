@@ -133,9 +133,14 @@ Route25_SeaCottage_EventScript_GetEeveePC::
 	waitfanfare
 	bufferspeciesname STR_VAR_1, SPECIES_EEVEE
 	msgbox Text_GiveNicknameToThisMon, MSGBOX_YESNO
-	call_if_eq VAR_RESULT, NO, EventScript_TransferredToPC
+	goto_if_eq VAR_RESULT, NO, Route25_SeaCottage_EventScript_TransferEeveeToPC
 	call EventScript_NameReceivedBoxMon
+	goto Route25_SeaCottage_EventScript_TransferEeveeToPC
+	end
+
+Route25_SeaCottage_EventScript_TransferEeveeToPC::
 	call EventScript_TransferredToPC
+	release
 	end
 
 Route25_SeaCottage_EventScript_BillGoLookAtPC::
