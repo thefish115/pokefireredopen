@@ -85,6 +85,8 @@ Route25_SeaCottage_EventScript_BillWalkToTeleporter::
 	return
 
 Route25_SeaCottage_EventScript_BillThank::
+	setflag FLAG_HIDE_NUGGET_BRIDGE_ROCKET
+	setflag FLAG_SYS_NOT_SOMEONES_PC
 	famechecker FAMECHECKER_BILL, FCPICKSTATE_COLORED, UpdatePickStateFromSpecialVar8005
 	checkplayergender
 	call_if_eq VAR_RESULT, MALE, Route25_SeaCottage_EventScript_BillThanksMale
@@ -94,9 +96,7 @@ Route25_SeaCottage_EventScript_BillThank::
 	goto_if_eq EEVEE_ACCEPT_STATUS, 0, Route25_SeaCottage_EventScript_GetEeveeParty
 	goto_if_eq EEVEE_ACCEPT_STATUS, 1, Route25_SeaCottage_EventScript_GetEeveePC
 	goto_if_eq EEVEE_ACCEPT_STATUS, 2, EventScript_NoMoreRoomForPokemon
-	setflag FLAG_HIDE_NUGGET_BRIDGE_ROCKET
-	setflag FLAG_SYS_NOT_SOMEONES_PC
-	msgbox Route25_SeaCottage_Text_SSAnneParty
+	closemessage
 	release
 	end
 
@@ -138,6 +138,7 @@ Route25_SeaCottage_EventScript_GetEeveePC::
 
 Route25_SeaCottage_EventScript_BillGoLookAtPC::
 	msgbox Route25_SeaCottage_Text_CheckOutRareMonsOnPC
+	closemessage
 	release
 	end
 
