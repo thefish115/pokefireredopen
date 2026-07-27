@@ -93,6 +93,7 @@ Route25_SeaCottage_EventScript_BillThank::
 	goto_if_eq VAR_RESULT, 1, Route25_SeaCottage_EventScript_GetEeveePC
 	goto_if_eq VAR_RESULT, 2, EventScript_NoMoreRoomForPokemon
 	setflag FLAG_HIDE_NUGGET_BRIDGE_ROCKET
+	setflag FLAG_GOT_EEVEE_FROM_BILL
 	setflag FLAG_SYS_NOT_SOMEONES_PC
 	msgbox Route25_SeaCottage_Text_SSAnneParty
 	release
