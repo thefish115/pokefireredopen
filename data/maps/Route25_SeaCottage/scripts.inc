@@ -91,10 +91,9 @@ Route25_SeaCottage_EventScript_BillThank::
 	call_if_eq VAR_RESULT, MALE, Route25_SeaCottage_EventScript_BillThanksMale
 	call_if_eq VAR_RESULT, FEMALE, Route25_SeaCottage_EventScript_BillThanksFemale
 	givemon SPECIES_EEVEE, 5
-	setvar VAR_TEMP_2, VAR_RESULT
-	goto_if_eq VAR_TEMP_2, 0, Route25_SeaCottage_EventScript_GetEeveeParty
-	goto_if_eq VAR_TEMP_2, 1, Route25_SeaCottage_EventScript_GetEeveePC
-	goto_if_eq VAR_TEMP_2, 2, EventScript_NoMoreRoomForPokemon
+	goto_if_eq VAR_RESULT, 0, Route25_SeaCottage_EventScript_GetEeveeParty
+	goto_if_eq VAR_RESULT, 1, Route25_SeaCottage_EventScript_GetEeveePC
+	goto_if_eq VAR_RESULT, 2, EventScript_NoMoreRoomForPokemon
 	closemessage
 	release
 	end
@@ -115,8 +114,10 @@ Route25_SeaCottage_EventScript_GetEeveeParty::
 	waitfanfare
 	bufferspeciesname STR_VAR_1, SPECIES_EEVEE
 	msgbox Text_GiveNicknameToThisMon, MSGBOX_YESNO
-	goto_if_eq VAR_RESULT, YES, Route25_SeaCottage_EventScript_NameLastPartyMon
-	return
+	call_if_eq VAR_RESULT, YES, Route25_SeaCottage_EventScript_NameLastPartyMon
+	closemessage
+	release
+	end
 
 Route25_SeaCottage_EventScript_NameLastPartyMon::
 	call EventScript_GetGiftMonPartySlot
@@ -131,9 +132,11 @@ Route25_SeaCottage_EventScript_GetEeveePC::
 	waitfanfare
 	bufferspeciesname STR_VAR_1, SPECIES_EEVEE
 	msgbox Text_GiveNicknameToThisMon, MSGBOX_YESNO
-	goto_if_eq VAR_RESULT, YES, EventScript_NameReceivedBoxMon
+	call_if_eq VAR_RESULT, YES, EventScript_NameReceivedBoxMon
 	call EventScript_TransferredToPC
-	return
+	closemessage
+	release
+	end
 
 Route25_SeaCottage_EventScript_BillGoLookAtPC::
 	msgbox Route25_SeaCottage_Text_CheckOutRareMonsOnPC
